@@ -39,11 +39,18 @@ $(document).ready(function(){
     var firstName = $("input#firstName").val();
     var lastName = $("input#lastName").val();
     var pizza_size = $("#pizzaSize").val();
-    var pizza_toppings = $("input[type='checkbox']").is(":checked");
+    var pizza_toppings_array = [];
+
+    $(".topping:checked").each(function() {
+      pizza_toppings_array.push($(this).val());
+    });
+
+    var toppings;
+    toppings = pizza_toppings_array.join(", ");
 
     var pizza_order = new PizzaOrder(firstName, lastName, pizza_size);
 
     $(".hidePizzaOrders").fadeIn();
-    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings + "</ul><h5>Your total is: $" + pizza_order.pizzaCost() + "</h5>");
+    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h5>Your total is: $" + pizza_order.pizzaCost() + "</h5>");
   });
 });
