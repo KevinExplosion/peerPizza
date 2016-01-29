@@ -22,3 +22,9 @@ describe("pizzaCost", function() {
     expect(newPizzaOrder.pizzaCost()).to.equal(12);
   });
 });
+
+describe("deliveryCheck", function() {
+  it("will pass false if a method of delivery has not been checked", function() {
+    expect(deliveryCheck(undefined)).to.equal(false);
+  });
+});

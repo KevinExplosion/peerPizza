@@ -10,13 +10,35 @@
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
-
-    <h1 class="page-header">Pizza Menu</h1>
+    <h1 class="jumbotron">Pizza Menu</h1>
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>A Pizza Menu h2</h2>
-
+            <h2>A Pizza Menu h2</h2><br>
+              <div class="row deliveryScreen">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                  <p>
+                    <label for="pizzaToppings">Will this order be for:</label>
+                      <br>
+                      <br>
+                        <input class="deliveryMethod" type="radio" name="gender" value="carryout"> Carryout
+                      <br>
+                        or
+                      <br>
+                        <input class="deliveryMethod" type="radio" name="gender" value="delivery"> Delivery
+                      <br>
+                      <br>
+                        <button type="submit" class="btn" id="continue">
+                          Continue to order
+                        </button>
+                  </p>
+                </div>
+                <div class="col-md-4">
+                </div>
+              </div>
+          </div>
+            <br>
+            <div class="row" id="pizzaForm">
             <form id="pizzaOrder">
               <div class="form-group">
                 <label for="firstName">First Name:</label>
@@ -71,6 +93,7 @@
             </div>
 
         </div>
+      </div>
         <footer>
           <p>
             THIS IS A FOOTER, DUDE

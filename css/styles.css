@@ -1,7 +1,22 @@
 h1 {
-  color: blue;
+  color: #FFD5A7;
   line-height: 0.5;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 60px;
+}
+
+.jumbotron {
+  background-image: url(../images/pizzaHeader.png);
+  background-color: black;
+  color: #FFD5A7;
+  background-size: 500px 300px;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: 0;
+  border-bottom:
+}
+
+#pizzaOrder {
+  display: none;
 }
 
 .hidePizzaOrders {
