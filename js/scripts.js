@@ -9,8 +9,18 @@ function PizzaOrder(firstName, lastName, size, toppings) {
 };
 
 PizzaOrder.prototype.pizzaCost = function() {
-  if (this.size = "small") {
-    return "$5";
+  if (this.size = "personalPan") {
+    return 6;
+  } else if (this.size = "small") {
+    return 10
+  } else if (this.size = "medium") {
+    return 12
+  } else if (this.size = "large") {
+    return 14
+  } else if (this.size = "xLarge") {
+    return 18
+  } else {
+    return 30
   }
 };
 

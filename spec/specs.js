@@ -10,7 +10,7 @@ describe("PizzaOrder", function() {
 
 describe("pizzaCost", function() {
   it("will provide a cost of $5 for a personal pan pizza", function() {
-    var newPizzaOrder = new PizzaOrder("John", "Public", "personal");
-    expect(newPizzaOrder.pizzaCost()).to.equal("$5");
+    var newPizzaOrder = new PizzaOrder("John", "Public", "personalPan");
+    expect(newPizzaOrder.pizzaCost()).to.equal(6);
   });
 });
