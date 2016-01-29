@@ -8,30 +8,42 @@ function PizzaOrder(firstName, lastName, size, toppings) {
   this.toppings = [];
 };
 
+// PizzaOrder.prototype.pizzaToppingsCost = function() {
+//   return this.toppings = this.toppings * 0.5;
+// }
+
 PizzaOrder.prototype.pizzaCost = function() {
-  if (this.size = "personalPan") {
+  if (this.size === "personalPan") {
     return 6;
-  } else if (this.size = "small") {
-    return 10
-  } else if (this.size = "medium") {
-    return 12
-  } else if (this.size = "large") {
-    return 14
-  } else if (this.size = "xLarge") {
-    return 18
+  } else if (this.size === "small") {
+    return 10;
+  } else if (this.size === "medium") {
+    return 12;
+  } else if (this.size === "large") {
+    return 14;
+  } else if (this.size === "xLarge") {
+    return 18;
   } else {
-    return 30
+    return 30;
   }
 };
 
-
 //User Interface
 
-// $(document).ready(function(){
-//
-//
-//   //Submit form when order button is clicked
-//   $(#submitOrder).click(function(event) {
-//
-//   });
-// });
+$(document).ready(function(){
+
+  var firstName = $("#firstName").val();
+  var lastName = $("#lastName").val();
+  var size = $("#pizzaSize").val();
+
+    //Submit form when order button is clicked
+    $("#pizzaOrder").submit(function(event) {
+      event.preventDefault();
+
+      var pizza_order = new PizzaOrder(firstName, lastName, size);
+
+      $(".hidePizzaOrders").show();
+      $("#pizzaOrders").append("<h4>Here is your order, " + firstName + lastName + ":</h4><ul><li>Size: " + size +  "</li>");
+      $("#pizzaCost").append(pizza_order.size);
+  });
+});
