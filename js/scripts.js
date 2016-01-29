@@ -50,7 +50,18 @@ $(document).ready(function(){
 
     var pizza_order = new PizzaOrder(firstName, lastName, pizza_size);
 
+    if(firstName === "" && lastName === "") {
+      //throw an alert if the user doesn't enter a first and last name
+      alert("Don't forget to add a name for your order!");
+    } else if (lastName === "") {
+      //throw an alert if the user doesn't enter a last name
+      alert("Please fill in the 'Last Name' field.")
+    } else if (firstName === "") {
+      //throw an alert if the user doesn't enter a first name
+      alert("Please fill in the 'First Name' field.")
+    } else {
     $(".hidePizzaOrders").fadeIn();
-    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h5>Your total is: $" + (pizza_order.pizzaCost() + (0.5 * pizza_toppings_array.length)) + "</h5>");
+    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h5>Your total is: $" + (pizza_order.pizzaCost() + pizza_toppings_array.length) + "</h5>");
+  }
   });
 });

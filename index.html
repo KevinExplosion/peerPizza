@@ -11,24 +11,26 @@
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
-      <h1 class="jumbotron">Pizza Menu</h1>
-        <div class="container">
 
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Please enter a name for your order</h2>
+    <h1 class="jumbotron">Pizza Menu</h1>
+      <div class="container">
 
-          <form id="pizzaOrder">
-            <div class="form-group">
-              <label for="firstName">First Name:</label>
-              <input type="text" class="form-control" id="firstName">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name:</label>
-              <input type="text" class="form-control" id="lastName">
-            </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Please enter a name for your order</h2>
 
+        <form id="pizzaOrder">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName">
+          </div>
+          <hr>
+          <h3>Customize your pizza!</h3>
+          <br>
             <div class="form-group">
               <label for="pizzaSize">What size pizza will you be ordering?</label>
               <select class="form-control" id="pizzaSize">
@@ -41,114 +43,116 @@
               </select>
             </div>
 
-            <div class="form-group row">
-              <label for="pizzaToppings">Would you like any toppings?</label><br>
+          <div class="form-group">
+            <label for="pizzaToppings">Would you like any toppings?</label><br>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" class="topping" value="Extra Cheese">Extra Cheese
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" class="topping" value="Extra Sauce">Sauce
+                </label>
+              </div>
+              <div class="col-md-4">
+                <label for="meatToppings">Meat</label><br>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" class="topping" value="Extra Cheese">Extra Cheese
+                    <input type="checkbox" class="topping" value="Pepperoni">Pepperoni
                   </label>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" class="topping" value="Sauce">Sauce
+                    <input type="checkbox" class="topping" value="Ham">Ham
                   </label>
                 </div>
-                <div class="col-md-4">
-                  <label for="meatToppings">Meat</label><br>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Pepperoni">Pepperoni
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Ham">Ham
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Sausage">Sausage
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Grilled chicken">Grilled chicken
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Bacon">Bacon
-                    </label>
-                  </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Sausage">Sausage
+                  </label>
                 </div>
-                <div class="col-md-4">
-                  <label for="veggieToppings">Veggies</label><br>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Onions">Onions
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Green Peppers">Green Peppers
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Olives">Olives
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Mushrooms">Mushrooms
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Spinach">Spinach
-                    </label>
-                  </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Grilled chicken">Grilled chicken
+                  </label>
                 </div>
-                <div class="col-md-4">
-                  <label for="veggieToppings">Special</label><br>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Anchovies">Anchovies
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Pineapple">Pineapple
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Teriyaki Ice Cream">Teriyaki Ice Cream
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Jimmy Hoffa">Jimmy Hoffa
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" class="topping" value="Uranium">Uranium
-                    </label>
-                  </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Bacon">Bacon
+                  </label>
                 </div>
-            </div>
-              <button type="submit" class="btn btn-warning" id="submitOrder">Submit order</button>
-          </form>
+              </div>
+              <div class="col-md-4">
+                <label for="veggieToppings">Veggies</label><br>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Onions">Onions
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Green Peppers">Green Peppers
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Olives">Olives
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Mushrooms">Mushrooms
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Spinach">Spinach
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="veggieToppings">Special</label><br>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Anchovies">Anchovies
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Pineapple">Pineapple
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Teriyaki Ice Cream">Teriyaki Ice Cream
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Jimmy Hoffa">Jimmy Hoffa
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" class="topping" value="Uranium">Uranium
+                  </label>
+                </div>
+              </div>
           </div>
+          <hr>
+            <button type="submit" class="btn btn-warning" id="submitOrder">Submit order</button>
+        </form>
         </div>
 
-        <div class="row hidePizzaOrders">
+        <div class="row hidePizzaOrders col-md-6">
           <h3>Pizza Orders</h3>
             <div id="pizzaOrders">
             </div>
           </div>
+
       </div>
+
     </div>
   </body>
 </html>
