@@ -1,7 +1,19 @@
 h1 {
   color: blue;
+  line-height: 0.5;
+  padding: 0 0 0 20px;
 }
 
 .hidePizzaOrders {
   display: none;
+}
+
+.hidePizzaOrders {
+  float: right;
+  margin-right: 20px;
+}
+
+/* == footer style. Keep at bottom of css file == */
+footer {
+  margin: 50px 0 0 10px
 }

@@ -10,67 +10,72 @@
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Pizza Menu h1</h1>
 
-      <div class="row">
-        <div class="col-md-6">
-          <h2>A Pizza Menu h2</h2>
+    <h1 class="page-header">Pizza Menu</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>A Pizza Menu h2</h2>
 
-          <form id="pizzaOrder">
-            <div class="form-group">
-              <label for="firstName">First Name:</label>
-              <input type="text" class="form-control" id="firstName">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name:</label>
-              <input type="text" class="form-control" id="lastName">
-            </div>
+            <form id="pizzaOrder">
+              <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" class="form-control" id="firstName">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" class="form-control" id="lastName">
+              </div>
 
-            <div class="form-group">
-              <label for="pizzaSize">Size</label>
-              <select class="form-control" id="pizzaSize">
-                <option value="personalPan">Personal Pan (6")</option>
-                <option value="small">Small (10")</option>
-                <option value="medium">Medium (12")</option>
-                <option value="large">Large (14")</option>
-                <option value="xLarge">X-Large (18")</option>
-                <option value="xxLarge">Flying Saucer (32")</option>
-              </select>
-            </div>
+              <div class="form-group">
+                <label for="pizzaSize">Size</label>
+                <select class="form-control" id="pizzaSize">
+                  <option value="personalPan">Personal Pan (6")</option>
+                  <option value="small">Small (10")</option>
+                  <option value="medium">Medium (12")</option>
+                  <option value="large">Large (14")</option>
+                  <option value="xLarge">X-Large (18")</option>
+                  <option value="xxLarge">Flying Saucer (32")</option>
+                </select>
+              </div>
 
-            <div class="form-group">
-              <label for="pizzaToppings">What toppings would you like?</label><br>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="none" checked>Just cheese for me, please!
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="pepperoni">Pepperoni
-                  </label>
-                </div>
-                  <div class="checkbox disabled">
+              <div class="form-group">
+                <label for="pizzaToppings">What toppings would you like?</label><br>
+                  <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="onions">Onions
+                      <input type="checkbox" value="none" checked>Just cheese for me, please!
                     </label>
                   </div>
-            </div>
-
-            <button type="submit" class="btn" id="submitOrder">Submit order</button>
-          </form>
-        </div>
-
-          <div class="hidePizzaOrders">
-            <h3>Pizza Orders h2</h2>
-              <div id="pizzaOrders">
-
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="pepperoni">Pepperoni
+                    </label>
+                  </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="onions">Onions
+                      </label>
+                    </div>
               </div>
-            <h3 id="pizzaCost">$</h4>
+
+              <button type="submit" class="btn" id="submitOrder">Submit order</button>
+            </form>
           </div>
 
-      </div>
+            <div class="hidePizzaOrders">
+              <h3>Pizza Orders h2</h2>
+                <div id="pizzaOrders">
+
+                </div>
+              <h3 id="pizzaCost">$</h4>
+            </div>
+
+        </div>
+        <footer>
+          <p>
+            THIS IS A FOOTER, DUDE
+          </p>
+        </footer>
     </div>
   </body>
 </html>

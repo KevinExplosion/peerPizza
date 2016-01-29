@@ -32,18 +32,18 @@ PizzaOrder.prototype.pizzaCost = function() {
 
 $(document).ready(function(){
 
-  var firstName = $("#firstName").val();
-  var lastName = $("#lastName").val();
-  var size = $("#pizzaSize").val();
-
     //Submit form when order button is clicked
     $("#pizzaOrder").submit(function(event) {
       event.preventDefault();
 
-      var pizza_order = new PizzaOrder(firstName, lastName, size);
+      var firstName = $("input#firstName").val();
+      var lastName = $("input#lastName").val();
+      var pizza_size = $("#pizzaSize").val();
 
-      $(".hidePizzaOrders").show();
-      $("#pizzaOrders").append("<h4>Here is your order, " + firstName + lastName + ":</h4><ul><li>Size: " + size +  "</li>");
-      $("#pizzaCost").append(pizza_order.size);
+      var pizza_order = new PizzaOrder(firstName, lastName, pizza_size);
+
+      $(".hidePizzaOrders").fadeIn();
+      $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li>");
+      $("#pizzaCost").append(pizza_order.pizzaCost());
   });
 });
