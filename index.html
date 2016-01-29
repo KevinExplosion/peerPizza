@@ -1,16 +1,61 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Peer Pizza</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <script src="js/jquery-1.12.0.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src ="js/scripts.js"></script>
-</head>
-<body class="container">
-  <h1>Pizza menu coming soon!</h1>
-</body>
+    <title>Kevin's Pizza Menu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="js/jquery-2.2.0.min.js" charset="utf-8"></script>
+    <script src="js/master.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pizza Menu h1</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>A Pizza Menu h2</h2>
+          <form id="pizzaMenu">
+            <div class="form-group">
+              <label for="pizzaSize">Size</label>
+              <select class="form-control" id="pizzaSize">
+                <option value="personalPan">Personal Pan</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xLarge">X-Large</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pizzaToppings">What toppings would you like?</label><br>
+              <input type="radio" name="topping" value="none" checked>  Just cheese for me!<br>
+              <input type="radio" name="topping" value="Pepperoni">  Pepperoni<br>
+              <input type="radio" name="topping" value="Onions">  Onions<br>
+              <input type="radio" name="topping" value="Mushrooms">  Mushrooms<br>
+            </div>
+            <!-- <div class="form-group">
+              <label for="movieTime">Time</label>
+              <input type="time" class="form-control" id="movieTime">
+            </div>
+            <div class="form-group">
+              <label for="quantity">How many pizzas would you like ordered?</label>
+              <input type="number" class="form-control" id="movieAge" min="1" max="100">
+            </div> -->
+
+            <button type="submit" class="btn" id="buttonSubmit">Submit order</button>
+          </form>
+        </div>
+
+          <div class="hidePizzaOrders">
+          <h2>Pizza Orders h2</h2>
+          <ul id="pizzaOrders">
+
+          </ul>
+          <h4 id="pizzaCost"></h4>
+        </div>
+
+      </div>
+    </div>
+  </body>
 </html>
