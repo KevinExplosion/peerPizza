@@ -51,6 +51,6 @@ $(document).ready(function(){
     var pizza_order = new PizzaOrder(firstName, lastName, pizza_size);
 
     $(".hidePizzaOrders").fadeIn();
-    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h5>Your total is: $" + pizza_order.pizzaCost() + "</h5>");
+    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h5>Your total is: $" + (pizza_order.pizzaCost() + (0.5 * pizza_toppings_array.length)) + "</h5>");
   });
 });
