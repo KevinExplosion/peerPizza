@@ -61,7 +61,7 @@ $(document).ready(function(){
       alert("Please fill in the 'First Name' field.")
     } else {
     $(".hidePizzaOrders").fadeIn();
-    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h5>Your total is: $" + (pizza_order.pizzaCost() + pizza_toppings_array.length) + "</h5>");
+    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h4>Your total is: $" + (pizza_order.pizzaCost() + pizza_toppings_array.length) + "</h4>");
   }
   });
 });

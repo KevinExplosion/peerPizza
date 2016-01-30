@@ -16,19 +16,19 @@ h1 {
 }
 
 .container {
-  border-left: 2px inset red;
-  border-right: 2px inset red;
-  border-bottom: 2px inset red;
+  border-left: 4px inset red;
+  border-right: 4px inset red;
+  border-bottom: 4px inset red;
   margin-top: -30px;
   padding-bottom: 20px;
 }
 
 .hidePizzaOrders {
+  margin-left: 10px;
   display: none;
 }
 
 .hidePizzaOrders {
-  float: right;
   margin-right: 20px;
 }
 
