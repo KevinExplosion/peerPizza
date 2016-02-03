@@ -5,7 +5,7 @@ function PizzaOrder(firstName, lastName, size, toppings) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.size = size;
-  this.toppings = [];
+  this.toppings = toppings;
 };
 
 // PizzaOrder.prototype.pizzaToppingsCost = function() {
@@ -14,19 +14,20 @@ function PizzaOrder(firstName, lastName, size, toppings) {
 
 PizzaOrder.prototype.pizzaCost = function() {
   if (this.size === "personalPan") {
-    return 6;
+    return 6 + this.toppings.length * .5;
   } else if (this.size === "small") {
-    return 10;
+    return 10 + this.toppings.length * .5;
   } else if (this.size === "medium") {
-    return 12;
+    return 12 + this.toppings.length * .5;
   } else if (this.size === "large") {
-    return 14;
+    return 14 + this.toppings.length * .5;
   } else if (this.size === "xLarge") {
-    return 18;
+    return 18 + this.toppings.length * .5;
   } else {
-    return 30;
+    return 30 + this.toppings.length * .5;
   }
 };
+
 
 //User Interface
 
@@ -45,10 +46,10 @@ $(document).ready(function(){
       pizza_toppings_array.push($(this).val());
     });
 
+    var pizza_order = new PizzaOrder(firstName, lastName, pizza_size, pizza_toppings_array);
+
     var toppings;
     toppings = pizza_toppings_array.join(", ");
-
-    var pizza_order = new PizzaOrder(firstName, lastName, pizza_size);
 
     if(firstName === "" && lastName === "") {
       //throw an alert if the user doesn't enter a first and last name
@@ -60,8 +61,9 @@ $(document).ready(function(){
       //throw an alert if the user doesn't enter a first name
       alert("Please fill in the 'First Name' field.")
     } else {
+
     $(".hidePizzaOrders").fadeIn();
-    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h4>Your total is: $" + (pizza_order.pizzaCost() + pizza_toppings_array.length) + "</h4>");
+    $("#pizzaOrders").append("<h4>Here is your order, " + firstName + " " + lastName + ":</h4><ul><li>Size: " + pizza_size +  "</li><li>Toppings: " + pizza_toppings_array + "</ul><h4>Your total is: $" + (pizza_order.pizzaCost()) + "</h4>");
   }
   });
 });
