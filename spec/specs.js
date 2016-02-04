@@ -1,10 +1,10 @@
 describe("PizzaOrder", function() {
   it("will provide a value for the pizza order", function() {
-    var newPizzaOrder = new PizzaOrder("John", "Public", "large");
+    var newPizzaOrder = new PizzaOrder("John", "Public", "large", ["pepperoni", "ham"]);
     expect(newPizzaOrder.firstName).to.equal("John");
     expect(newPizzaOrder.lastName).to.equal("Public");
     expect(newPizzaOrder.size).to.equal("large");
-    expect(newPizzaOrder.toppings).to.eql([]);
+    expect(newPizzaOrder.toppings).to.eql(["pepperoni", "ham"]);
   });
 });
 
