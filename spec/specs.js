@@ -17,8 +17,9 @@ describe("PizzaOrder", function() {
 
 describe("pizzaCost", function() {
   it("will provide a cost based on the size of the pizza", function() {
-    var newPizzaOrder = new PizzaOrder("John", "Public", "medium");
+    var newPizzaOrder = new PizzaOrder("John", "Public", "medium", ["pepperoni", "ham"]);
     expect(newPizzaOrder.size).to.equal("medium")
-    expect(newPizzaOrder.pizzaCost()).to.equal(12);
+        expect(newPizzaOrder.toppings.length).to.equal(2);
+    expect(newPizzaOrder.pizzaCost()).to.equal(13);
   });
 });
