@@ -2,7 +2,7 @@
 <!-- README FILE. Replace where needed -->
 # _Pizza Menu!_
 
-#### _Order a pizza. Or fuh'get about it_
+#### _Order a pizza online! If it's not there in 30 minutes or less...well, this isn't a real menu, so..._
 
 #### By _**Kevin Mattison**_
 
